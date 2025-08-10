@@ -11,42 +11,42 @@
   --color-purple-500: hsla(256, 67%, 59%);
 
   /* FONT SIZE */
-  --font-size-xs: 0.5rem; /* 8px */
-  --font-size-sm: 0.75rem; /* 12px */
-  --font-size-md: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-xl: 1.25rem; /* 20px */
-  --font-size-2xl: 1.5rem; /* 24px */
-  --font-size-3xl: 1.625rem; /* 26px */
-  --font-size-4xl: 1.75rem; /* 28px */
-  --font-size-5xl: 2rem; /* 32px */
-  --font-size-6xl: 2.125rem; /* 34px */
-  --font-size-7xl: 2.25rem; /* 36px */
-  --font-size-8xl: 2.375rem; /* 38px */
-  --font-size-9xl: 2.5rem; /* 40px */
-  --font-size-10xl: 2.875rem; /* 46px */
-  --font-size-11xl: 3rem; /* 48px */
-  --font-size-12xl: 3.375rem; /* 54px */
-  --font-size-13xl: 3.5rem; /* 56px */
-  --font-size-14xl: 3.875rem; /* 62px */
+  --font-size-xs: 0.5rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.625rem;
+  --font-size-4xl: 1.75rem;
+  --font-size-5xl: 2rem;
+  --font-size-6xl: 2.125rem;
+  --font-size-7xl: 2.25rem;
+  --font-size-8xl: 2.375rem;
+  --font-size-9xl: 2.5rem;
+  --font-size-10xl: 2.875rem;
+  --font-size-11xl: 3rem;
+  --font-size-12xl: 3.375rem;
+  --font-size-13xl: 3.5rem;
+  --font-size-14xl: 3.875rem;
 
-  /* lINE HEIGHT */
+  /* LINE HEIGHT */
   --leading-tight: 0.9;
   --leading-snug: 1.1;
   --leading-normal: 1.5;
 
   /* LETTER SPACING */
-  --tracking-none: 0rem; /* 0px */
+  --tracking-none: 0rem;
   --tracking-tightest: -0.125rem;
-  --tracking-crunched: -0.1875rem; /* -3px */
+  --tracking-crunched: -0.1875rem;
 
   /* SPACING */
-  --spacing-100: 0.5rem; /* 8px */
-  --spacing-200: 1rem; /* 16px */
-  --spacing-300: 1.5rem; /* 24px */
-  --spacing-400: 2rem; /* 32px */
-  --spacing-500: 2.5rem; /* 40px */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
 
   /* BORDER RADIUS */
   --radius-sm: 0.5rem;
@@ -58,26 +58,20 @@
   --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
 
-  /* SEMANTIC TOKENS */
+  /* SEMANTIC TOKENS - Default Theme */
+  --surface-primary: var(--color-off-white);
+  --surface-white: var(--color-white);
+  --surface-brand-primary: var(--color-purple-500);
+  --surface-brand-secondary: var(--color-purple-100);
+  --surface-accent: var(--color-yellow-500);
+  --surface-accent-soft: var(--color-yellow-100);
 
-  /* SURFACE TOKENS */
-  --surface-primary: var(--color-off-white); /* Main content areas */
-  --surface-white: var(--color-white); /* Main content areas */
-  --surface-brand-primary: var(--color-purple-500); /* Hero, CTA sections */
-  --surface-brand-secondary: var(--color-purple-100); /* Supporting sections */
-  --surface-accent: var(--color-yellow-500); /* Highlights, features */
-  --surface-accent-soft: var(--color-yellow-100); /* Subtle accents */
-
-  /* TEXT TOKENS */
-
-  /* TEXT COLOR */
   --text-primary: var(--color-black);
-  --text-inverse: var(--color-white); /* On dark backgrounds */
-  --text-brand: var(--color-purple-500); /* Brand-coloured text */
-  --text-accent: var(--color-yellow-500); /* To emphasize supporting text */
-  --text-muted: var(--color-gray); /* Secondary text */
+  --text-inverse: var(--color-white);
+  --text-brand: var(--color-purple-500);
+  --text-accent: var(--color-yellow-500);
+  --text-muted: var(--color-gray);
 
-  /* TEXT FONT SIZE */
   --text-heading-xxl: var(--font-size-10xl);
   --text-heading-xl: var(--font-size-5xl);
   --text-heading-lg: var(--font-size-3xl);
@@ -85,14 +79,12 @@
   --text-heading-sm: var(--font-size-md);
   --text-heading-xs: var(--font-size-sm);
 
-  /* INTERACTIVE TOKENS */
-  --interactive-primary: var(--color-purple-500); /* Primary buttons */
-  --interactive-secondary: var(--color-yellow-500); /* Secondary actions */
+  --interactive-primary: var(--color-purple-500);
+  --interactive-secondary: var(--color-yellow-500);
 
-  /* STATUS TOKENS */
-  --status-positive: #22c55e; /* Growth, success */
-  --status-info: var(--color-purple-500); /* Information */
-  --status-warning: var(--color-yellow-500); /* Alerts */
+  --status-positive: #22c55e;
+  --status-info: var(--color-purple-500);
+  --status-warning: var(--color-yellow-500);
 }
 
 .body {
@@ -103,6 +95,9 @@
 }
 
 .showcase {
+  display: flex;
+  gap: var(--spacing-400);
+  flex-direction: column;
 }
 
 .header {
@@ -144,6 +139,8 @@
     justify-content: center;
   }
 }
+
+.content:manage-multiple
 
 @media (min-width: 767px) {
   :root {
