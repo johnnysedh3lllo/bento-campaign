@@ -140,8 +140,6 @@
   }
 }
 
-.content:manage-multiple
-
 @media (min-width: 767px) {
   :root {
     --text-heading-xxl: var(--font-size-12xl);
