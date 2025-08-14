@@ -123,6 +123,7 @@
   --text-heading-xs: var(--font-size-md);
   --text-heading-xxs: var(--font-size-sm);
 
+  --text-body-10xl: var(--font-size-10xl);
   --text-body-9xl: var(--font-size-9xl);
   --text-body-8xl: var(--font-size-8xl);
   --text-body-7xl: var(--font-size-7xl);
@@ -422,6 +423,23 @@
   background-color: var(--surface-white);
 }
 
+.audience__header {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.audience__heading {
+  font-size: var(--text-heading-xxl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-tight);
+}
+
+.audience__caption {
+  line-height: var(--leading-snug);
+  font-size: var(--text-body-lg);
+}
+
 .audience__avatars {
   position: relative;
   width: min(11.125rem, 100%);
@@ -517,6 +535,12 @@
   .growth-illustration {
     width: 100%;
   }
+
+  .audience {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media (min-width: 79.9375rem) {
@@ -556,5 +580,9 @@
     .calendar__wrapper {
       height: 5.94rem;
     }
+  }
+
+  .audience {
+    flex-direction: column;
   }
 }
