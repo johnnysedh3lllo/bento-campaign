@@ -1,0 +1,93 @@
+@media (min-width: 47.9375rem) {
+  :root {
+    --text-heading-xxl: var(--font-size-12xl);
+    --text-heading-xl: var(--font-size-7xl);
+    --text-heading-lg: var(--font-size-4xl);
+  }
+
+  .heading--2 {
+    letter-spacing: -0.135rem; /* TODO: TOKENIZE THIS */
+  }
+  .heading--3 {
+    letter-spacing: -0.105rem;
+  }
+
+  .body {
+    padding: var(--spacing-900) var(--spacing-500);
+  }
+
+  .showcase {
+    display: var(--display-grid);
+    gap: var(--spacing-400);
+    grid-template-columns: 1fr 1fr;
+    width: min(70rem, 100%);
+    margin: 0 auto;
+    grid-template-areas:
+      "header header"
+      "account schedule"
+      "insights insights"
+      "growth growth"
+      "audience audience"
+      "cta composition";
+  }
+
+  /* SECTIONS */
+  .header {
+    padding: var(--spacing-400);
+    grid-area: header;
+  }
+
+  .account {
+    padding: var(--spacing-300);
+    grid-area: account;
+    width: 100%;
+  }
+
+  .schedule {
+    padding: var(--spacing-300) var(--spacing-300) 0;
+    grid-area: schedule;
+
+    .calendar__wrapper {
+      height: initial;
+    }
+  }
+
+  .insights {
+    grid-area: insights;
+  }
+
+  .growth {
+    grid-area: growth;
+  }
+
+  .growth--wrapper {
+    flex-direction: var(--flex-direction-row);
+    justify-content: center;
+    align-items: center;
+  }
+  .growth__heading {
+    line-height: var(--leading-tight);
+    letter-spacing: -0.12rem;
+    width: min(32.79rem, 100%);
+  }
+  .growth-illustration {
+    width: 100%;
+  }
+
+  .audience {
+    grid-area: audience;
+
+    flex-direction: var(--flex-direction-row);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta {
+    grid-area: cta;
+    justify-content: center;
+  }
+
+  .composition {
+    grid-area: composition;
+  }
+}

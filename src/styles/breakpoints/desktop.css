@@ -1,0 +1,90 @@
+@media (min-width: 79.9375rem) {
+  :root {
+    --text-heading-xxl: var(--font-size-14xl);
+    --text-heading-xl: var(--font-size-9xl);
+    --text-heading-lg: var(--font-size-5xl);
+  }
+
+  .body {
+    background-color: var(--surface-white);
+    padding: var(--spacing-500);
+  }
+
+  .heading--2,
+  .heading--3 {
+    letter-spacing: var(--tracking-tightest);
+  }
+
+  .showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .cta {
+    grid-area: 1 / 1 / 5 / 2;
+  }
+
+  .header {
+    grid-area: 1 / 2 / 4 / 4;
+  }
+  .insights {
+    grid-area: 1 / 4 / 7 / 5;
+    overflow: hidden;
+  }
+
+  .chart-illustration {
+    align-self: self-start;
+    width: initial;
+  }
+
+  .composition {
+    grid-area: 5 / 1 / 8 / 2;
+  }
+  .account {
+    grid-area: 4 / 2 / 7 / 3;
+  }
+  .schedule {
+    grid-area: 4 / 3 / 7 / 4;
+  }
+  .audience {
+    grid-area: 7 / 2 / 8 / 3;
+  }
+  .growth {
+    grid-area: 7 / 3 / 8 / 5;
+  }
+
+  .header {
+    padding: var(--spacing-400);
+    justify-content: center;
+  }
+
+  .account {
+    padding: var(--spacing-300);
+  }
+
+  .account__heading,
+  .schedule__heading {
+    max-inline-size: var(--text-width-lg);
+  }
+
+  .schedule {
+    padding: var(--spacing-300) var(--spacing-300) 0;
+
+    .calendar__wrapper {
+      height: 6.125rem;
+    }
+  }
+
+  .growth__heading {
+    text-align: left;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.135rem;
+  }
+
+  .audience {
+    flex-direction: var(--flex-direction-column);
+    align-items: start;
+  }
+}

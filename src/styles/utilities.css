@@ -1,0 +1,19 @@
+/* UTILITY CLASSES */
+.heading {
+}
+
+.heading--2 {
+  font-size: var(--text-heading-xl);
+  line-height: var(--leading-tight);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-tighter);
+}
+.heading--3 {
+  font-size: var(--text-heading-lg);
+  line-height: var(--leading-tight);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.12rem; /* TODO: TOKENIZE THIS */
+}
+
+.section {
+}
