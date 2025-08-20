@@ -15,8 +15,6 @@ const accountHeading = document.querySelectorAll(".account__heading");
 
 const scheduleHeading = document.querySelector(".schedule__heading ");
 const calendarWrapper = document.querySelector(".calendar__wrapper");
-const initialDate = document.getElementById("date");
-const tickedDate = document.getElementById("date--checked");
 
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
