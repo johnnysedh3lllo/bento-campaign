@@ -122,6 +122,7 @@
 
 .schedule {
   background-color: var(--surface-accent);
+  overflow: hidden;
 
   /* TODO: REDUCE DUPLICATION*/
   border-radius: var(--radius-md);

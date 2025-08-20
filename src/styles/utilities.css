@@ -16,4 +16,11 @@
 }
 
 .section {
+  opacity: 0;
+  visibility: hidden;
+  scale: 0;
+}
+
+#calendar-date--ticked {
+  visibility: hidden;
 }
