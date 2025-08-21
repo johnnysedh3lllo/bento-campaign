@@ -15,11 +15,11 @@
   letter-spacing: -0.12rem; /* TODO: TOKENIZE THIS */
 }
 
-/* .section {
+.section {
   opacity: 0;
   visibility: hidden;
   scale: 0;
-} */
+} 
 
 #calendar-date--ticked {
   visibility: hidden;
