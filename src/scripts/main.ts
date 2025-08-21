@@ -180,8 +180,8 @@ function createInsightsAnimation(mainTl: GSAPTimeline) {
 function createGrowthAnimation(mainTl: GSAPTimeline) {
   mainTl.fromTo(
     growthHeadingSplit.words,
-    { autoAlpha: 0, xPercent: 20 },
-    { autoAlpha: 1, xPercent: 0, stagger: { amount: 0.3 } },
+    { autoAlpha: 0, xPercent: 20, yPercent: 20 },
+    { autoAlpha: 1, xPercent: 0, yPercent: 0, stagger: { amount: 0.3 } },
     "0.9"
   );
 }
