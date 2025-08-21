@@ -15,8 +15,20 @@ const accountHeading = document.querySelectorAll(".account__heading");
 
 const scheduleHeading = document.querySelector(".schedule__heading ");
 const calendarWrapper = document.querySelector(".calendar__wrapper");
+
 const initialDate = document.getElementById("date");
 const tickedDate = document.getElementById("date--checked");
+
+const insightsHeading = document.querySelector(".insights__heading");
+const chartIllustration = document.querySelector(".chart-illustration");
+const insightMostActive = document.querySelectorAll(".insights__most-active");
+const insightMostActiveText = document.querySelectorAll(
+  ".insights__most-active--text"
+);
+const insightChartBar = document.querySelectorAll(".insights__chart-bar");
+const insightCaption = document.querySelector(".insights__caption");
+
+const growthHeading = document.querySelector(".growth__heading");
 
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
@@ -28,6 +40,10 @@ const accountHeadingSplit = new SplitText(accountHeading, {
 });
 
 const scheduleHeadingSplit = new SplitText(scheduleHeading, {
+  type: "words",
+});
+
+const growthHeadingSplit = new SplitText(growthHeading, {
   type: "words",
 });
 
@@ -108,20 +124,66 @@ function createScheduleAnimation(mainTl: GSAPTimeline) {
       scheduleHeadingSplit.words,
       { autoAlpha: 0, xPercent: 10 },
       { autoAlpha: 1, xPercent: 0, stagger: { amount: 0.3 } },
-      "0.45"
+      "0.5"
     )
     .fromTo(
       calendarWrapper,
       { autoAlpha: 0, yPercent: 30 },
       { autoAlpha: 1, yPercent: 0 },
       "<+=0.5"
+    );
+  // .fromTo(
+  //   "#date--checked",
+  //   { yPercent: 10 },
+  //   { yPercent: 0, stagger: 0.5 },
+  //   "<"
+  // );
+}
+
+function createInsightsAnimation(mainTl: GSAPTimeline) {
+  console.log("insight chart bar", insightChartBar);
+
+  mainTl
+    .fromTo(
+      insightsHeading,
+      { autoAlpha: 0, xPercent: 20 },
+      { autoAlpha: 1, xPercent: 1 },
+      "0.7"
     )
-    // .fromTo(
-    //   "#date--checked",
-    //   { yPercent: 10 },
-    //   { yPercent: 0, stagger: 0.5 },
-    //   "<"
-    // );
+    .fromTo(
+      chartIllustration,
+      { autoAlpha: 0, xPercent: 10 },
+      { autoAlpha: 1, xPercent: 0 },
+      "<+=0.2"
+    )
+    .fromTo(
+      insightCaption,
+      { autoAlpha: 0, yPercent: -10 },
+      { autoAlpha: 1, yPercent: 0 },
+      "<"
+    )
+    .fromTo(
+      insightChartBar,
+      { scaleY: 0, transformOrigin: "bottom center" },
+      { scaleY: 1, stagger: 0.1, ease: "back.out(1)" },
+      "<+=0.1"
+    )
+    .fromTo(insightMostActive, { scale: 0 }, { scale: 1 }, "<+=0.1")
+    .fromTo(
+      insightMostActiveText,
+      { autoAlpha: 0, yPercent: 20 },
+      { autoAlpha: 1, yPercent: 0, duration: 0.7, ease: "back.inOut(7)" },
+      ">"
+    );
+}
+
+function createGrowthAnimation(mainTl: GSAPTimeline) {
+  mainTl.fromTo(
+    growthHeadingSplit.words,
+    { autoAlpha: 0, xPercent: 20 },
+    { autoAlpha: 1, xPercent: 0, stagger: 0.3 },
+    "0.9"
+  );
 }
 
 // Initialize animation
@@ -132,9 +194,11 @@ function init() {
   createHeaderAnimation(mainTl);
   createAccountAnimation(mainTl);
   createScheduleAnimation(mainTl);
+  createInsightsAnimation(mainTl);
+  createGrowthAnimation(mainTl);
 
   mainTl.play();
-//   GSDevTools.create();
+  GSDevTools.create();
 }
 
 window.addEventListener("load", init);
