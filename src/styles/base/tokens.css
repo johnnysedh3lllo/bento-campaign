@@ -10,6 +10,9 @@
   --color-purple-100: hsla(241, 88%, 92%);
   --color-purple-500: hsla(256, 67%, 59%);
 
+  --color-green-100: hsl(144, 100%, 93%);
+  --color-green-500: hsl(144, 80%, 28%);
+
   --shadow-lg: -0.6113rem 0.7336rem 1.5284rem 0 hsla(285, 65%, 29%, 0.05);
 
   /* FONT SIZE */
@@ -147,7 +150,9 @@
   --interactive-primary: var(--color-purple-500);
   --interactive-secondary: var(--color-yellow-500);
 
-  --status-positive: #22c55e;
+  --status-positive: var(--color-green-500);
+  --status-positive-secondary: var(--color-green-100);
+
   --status-info: var(--color-purple-500);
   --status-warning: var(--color-yellow-500);
 

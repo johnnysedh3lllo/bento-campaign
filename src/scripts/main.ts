@@ -201,4 +201,4 @@ function init() {
   GSDevTools.create();
 }
 
-window.addEventListener("load", init);
+// window.addEventListener("load", init);

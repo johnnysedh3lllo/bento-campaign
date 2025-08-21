@@ -247,6 +247,55 @@
   align-items: center;
 }
 
+.chart {
+  border-radius: var(--radius-md);
+  background-color: var(--surface-white);
+  padding: calc(var(--spacing-300) + var(--spacing-50) + 0.6px);
+  position: relative;
+  /* width: fit-content; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+}
+
+.chart__heading {
+  color: var(--text-muted);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--text-heading-xs);
+}
+
+.chart__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart__followers {
+  font-weight: var(--font-weight-medium);
+  font-size: calc(var(--spacing-300) + var(--spacing-50) + 1.7px);
+}
+
+.chart__bars {
+  width: 150px;
+}
+
+.badge {
+  width: 39px;
+  height: 17px;
+  border-radius: calc(var(--radius-md) - 2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-body-xs);
+  color: var(--status-positive);
+  background-color: var(--status-positive-secondary);
+}
+
+.account__item--generic {
+  background-color: var(--surface-white);
+  position: absolute;
+}
+
 .audience {
   display: var(--display-flex);
   flex-direction: var(--flex-direction-column);
