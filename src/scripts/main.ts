@@ -202,8 +202,8 @@ function init() {
 }
 
 // Disable browser scroll restoration
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
+// if ("scrollRestoration" in history) {
+//  history.scrollRestoration = "manual";
+// }
 
 window.addEventListener("load", init);
