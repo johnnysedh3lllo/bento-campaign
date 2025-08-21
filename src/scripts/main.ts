@@ -16,8 +16,8 @@ const accountHeading = document.querySelectorAll(".account__heading");
 const scheduleHeading = document.querySelector(".schedule__heading ");
 const calendarWrapper = document.querySelector(".calendar__wrapper");
 
-const initialDate = document.getElementById("date");
-const tickedDate = document.getElementById("date--checked");
+// const initialDate = document.getElementById("date");
+// const tickedDate = document.getElementById("date--checked");
 
 const insightsHeading = document.querySelector(".insights__heading");
 const chartIllustration = document.querySelector(".chart-illustration");
@@ -181,7 +181,7 @@ function createGrowthAnimation(mainTl: GSAPTimeline) {
   mainTl.fromTo(
     growthHeadingSplit.words,
     { autoAlpha: 0, xPercent: 20 },
-    { autoAlpha: 1, xPercent: 0, stagger: 0.3 },
+    { autoAlpha: 1, xPercent: 0, stagger: { amount: 0.3 } },
     "0.9"
   );
 }
