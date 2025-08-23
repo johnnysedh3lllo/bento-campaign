@@ -120,13 +120,11 @@ const audienceCaptionSplit = new SplitText(audienceCaption, {
 const ctaHeadingTextSplit = new SplitText(ctaHeadingText, {
   type: "lines, words",
   mask: "words",
-//   linesClass: "split--line",
 });
 
 const compositionHeadingSplit = new SplitText(compositionHeading, {
   type: "lines, words",
   mask: "words",
-//   linesClass: "split--line",
 });
 
 console.log(ctaHeadingText);
@@ -140,6 +138,14 @@ function setInitialStates() {
   gsap.set(headerHeading, { autoAlpha: 0, yPercent: -20 });
   gsap.set(headerStars, { scale: 0, yPercent: 20 });
   gsap.set(reviewSplit.words, { yPercent: 30, autoAlpha: 0 });
+  gsap.set(ctaHeadingTextSplit.masks, {
+    overflow: "visible",
+    clipPath: "inset(0% -5% -14%)",
+  });
+  gsap.set(compositionHeadingSplit.masks, {
+    overflow: "visible",
+    clipPath: "inset(0% -5% -14%)",
+  });
 }
 
 // Create main animation timeline
@@ -349,7 +355,7 @@ function createCTAAnimation(mainTl: GSAPTimeline) {
   mainTl
     .fromTo(
       ctaHeadingTextSplit.words,
-      { xPercent: -2, yPercent: 100 },
+      { xPercent: -2, yPercent: 105 },
       { xPercent: 0, yPercent: 0, stagger: { amount: 0.3 } },
       "1.3"
     )
@@ -386,7 +392,7 @@ function createCTAAnimation(mainTl: GSAPTimeline) {
 function createCompositionAnimation(mainTl: GSAPTimeline) {
   mainTl.fromTo(
     compositionHeadingSplit.words,
-    { xPercent: -2, yPercent: -130 },
+    { xPercent: -2, yPercent: -135 },
     { xPercent: 0, yPercent: 0, stagger: { amount: 0.4 } },
     "1.4"
   );
