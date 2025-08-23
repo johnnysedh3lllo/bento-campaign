@@ -77,6 +77,10 @@
     }
   }
 
+  .growth--wrapper {
+    gap: calc(var(--spacing-500) + 1.9rem);
+  }
+
   .growth__heading {
     text-align: left;
     line-height: var(--leading-tight);

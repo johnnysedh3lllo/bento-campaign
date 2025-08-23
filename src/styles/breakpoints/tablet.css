@@ -58,12 +58,14 @@
 
   .growth {
     grid-area: growth;
+    /* padding-block-end: calc(var(--spacing-400) + 0.14rem); */
   }
 
   .growth--wrapper {
     flex-direction: var(--flex-direction-row);
     justify-content: center;
     align-items: center;
+    /* gap: calc(var(--spacing-600) + 0.49rem); */
   }
   .growth__heading {
     line-height: var(--leading-tight);
