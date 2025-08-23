@@ -26,6 +26,10 @@
     grid-area: 1 / 1 / 5 / 2;
   }
 
+  .cta__heading {
+  width: calc(var(--text-width-md) + 1ch);
+  }
+
   .header {
     grid-area: 1 / 2 / 4 / 4;
   }
@@ -42,6 +46,10 @@
   .composition {
     grid-area: 5 / 1 / 8 / 2;
   }
+
+.composition__heading {
+  width: calc(var(--text-width-md));
+}
   .account {
     grid-area: 4 / 2 / 7 / 3;
   }
