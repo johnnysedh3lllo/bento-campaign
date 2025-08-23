@@ -58,22 +58,18 @@ const compositionHeading = document.querySelector(".composition__heading");
 
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
-  autoSplit: true,
   type: "words",
 });
 
 const accountHeadingSplit = new SplitText(accountHeading, {
-  autoSplit: true,
   type: "words",
 });
 
 const scheduleHeadingSplit = new SplitText(scheduleHeading, {
-  autoSplit: true,
   type: "words",
 });
 
 const growthHeadingSplit = new SplitText(growthHeading, {
-  autoSplit: true,
   type: "words",
 });
 
@@ -118,19 +114,16 @@ const counterEffect = {
 };
 
 const audienceCaptionSplit = new SplitText(audienceCaption, {
-  autoSplit: true,
   type: "words",
 });
 
 const ctaHeadingTextSplit = new SplitText(ctaHeadingText, {
-  autoSplit: true,
   type: "lines, words",
   mask: "words",
 //   linesClass: "split--line",
 });
 
 const compositionHeadingSplit = new SplitText(compositionHeading, {
-  autoSplit: true,
   type: "lines, words",
   mask: "words",
 //   linesClass: "split--line",
