@@ -19,7 +19,16 @@
   opacity: 0;
   visibility: hidden;
   scale: 0;
-} 
+}
+
+.split--word {
+  overflow: clip;
+  /* padding: 4px 2px; */
+}
+.split--line {
+  overflow: clip;
+  /* padding: 4px 2px; */
+}
 
 #calendar-date--ticked {
   visibility: hidden;

@@ -132,6 +132,8 @@
   flex-direction: var(--flex-direction-column);
   /* TODO: REDUCE DUPLICATION*/
 
+  height: fit-content;
+
   .calendar__wrapper {
     display: var(--display-flex);
     height: 8.5625rem;
@@ -377,6 +379,7 @@
 }
 
 .cta__heading {
+  width: calc(var(--text-width-md) + 1ch);
   > em {
     display: inline-flex;
     color: var(--text-brand);
@@ -422,6 +425,15 @@
   padding: var(--spacing-300);
   background: var(--surface-accent);
   border-radius: var(--radius-md);
+}
+
+.composition__heading {
+  will-change: transform;
+  width: calc(var(--text-width-md));
+}
+
+.composition__heading * {
+  will-change: transform;
 }
 
 .chat-illustration {

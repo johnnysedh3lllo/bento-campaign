@@ -145,6 +145,7 @@
   --text-body-sm: var(--font-size-sm);
   --text-body-xs: var(--font-size-xs);
 
+  --text-width-md: 6ch;
   --text-width-lg: 9ch;
   --text-width-xl: 28ch;
 

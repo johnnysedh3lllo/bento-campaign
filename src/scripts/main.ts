@@ -54,20 +54,26 @@ const ctaCursor = document.querySelector(".cta__cursor");
 const ctaBtn = document.querySelector(".cta__button");
 const ctaBtnIcon = document.querySelector(".cta__btn-icon");
 
+const compositionHeading = document.querySelector(".composition__heading");
+
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
+  autoSplit: true,
   type: "words",
 });
 
 const accountHeadingSplit = new SplitText(accountHeading, {
+  autoSplit: true,
   type: "words",
 });
 
 const scheduleHeadingSplit = new SplitText(scheduleHeading, {
+  autoSplit: true,
   type: "words",
 });
 
 const growthHeadingSplit = new SplitText(growthHeading, {
+  autoSplit: true,
   type: "words",
 });
 
@@ -80,7 +86,7 @@ const counterEffect = {
     ease: "power1",
     increment: 1,
   },
-  effect: (targets, config) => {
+  effect: (targets: any, config: any) => {
     let timeline = gsap.timeline();
 
     console.log("targets", targets[0].innerText);
@@ -112,14 +118,26 @@ const counterEffect = {
 };
 
 const audienceCaptionSplit = new SplitText(audienceCaption, {
+  autoSplit: true,
   type: "words",
 });
 
 const ctaHeadingTextSplit = new SplitText(ctaHeadingText, {
-  type: "words",
+  autoSplit: true,
+  type: "lines, words",
   mask: "words",
-  linesClass: "line++",
+//   linesClass: "split--line",
 });
+
+const compositionHeadingSplit = new SplitText(compositionHeading, {
+  autoSplit: true,
+  type: "lines, words",
+  mask: "words",
+//   linesClass: "split--line",
+});
+
+console.log(ctaHeadingText);
+console.log(compositionHeading);
 
 gsap.registerEffect(counterEffect);
 
@@ -372,6 +390,15 @@ function createCTAAnimation(mainTl: GSAPTimeline) {
     .to(ctaBtn, { scale: 0.9, yoyo: true, repeat: 1, duration: 0.2 }, ">+=0.1");
 }
 
+function createCompositionAnimation(mainTl: GSAPTimeline) {
+  mainTl.fromTo(
+    compositionHeadingSplit.words,
+    { xPercent: -2, yPercent: -130 },
+    { xPercent: 0, yPercent: 0, stagger: { amount: 0.4 } },
+    "1.4"
+  );
+}
+
 // Initialize animation
 function init() {
   setInitialStates();
@@ -384,6 +411,7 @@ function init() {
   createGrowthAnimation(mainTl);
   createAudienceAnimation(mainTl);
   createCTAAnimation(mainTl);
+  createCompositionAnimation(mainTl);
 
   mainTl.play();
   GSDevTools.create();
@@ -394,4 +422,6 @@ function init() {
 //  history.scrollRestoration = "manual";
 // }
 
-window.addEventListener("load", init);
+// window.addEventListener("load", init);
+
+document.addEventListener("DOMContentLoaded", init);
