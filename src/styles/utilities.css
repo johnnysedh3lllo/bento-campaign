@@ -20,6 +20,19 @@
   visibility: hidden;
   scale: 0;
 }
+
+.avatar--sm {
+  inline-size: calc(var(--size-7) - 0.125rem);
+  block-size: calc(var(--size-7) - 0.125rem);
+}
+
+.truncate--multi {
+  display: -webkit-box; /* flex-like for webkit */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* number of lines */
+  overflow: hidden; /* cut off extra */
+}
+
 /* 
 .split--word,
 .split-mask--word-mask {

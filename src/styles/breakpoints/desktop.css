@@ -19,48 +19,73 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
-    /* gap: 1rem; */
-  }
 
-  .cta {
-    grid-area: 1 / 1 / 5 / 2;
+    /* max-block-size: 54rem; */
+
+    grid-template-areas: initial;
   }
 
   .cta__heading {
-  width: calc(var(--text-width-md) + 1ch);
+    inline-size: calc(var(--text-width-md) + 1ch);
   }
 
-  .header {
-    grid-area: 1 / 2 / 4 / 4;
+  /* 
+    .header {
+    grid-area: 1 / 2 / 2 / 4;
   }
+
   .insights {
-    grid-area: 1 / 4 / 7 / 5;
+    grid-area: 1 / 4 / 4 / 5;
     overflow: hidden;
   }
+  .account {
+    grid-area: 2 / 2 / 4 / 3;
+  }
+  .schedule {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+  .audience {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .growth {
+    grid-area: 4 / 3 / 5 / 5;
+  }
 
-  .chart-illustration {
-    align-self: self-start;
-    width: initial;
+  .cta {
+    grid-area: 1 / 1 / 3 / 2;
   }
 
   .composition {
-    grid-area: 5 / 1 / 8 / 2;
+    grid-area: 3 / 1 / 5 / 2;
+  } */
+
+  .header {
+    grid-area: 1 / 2 / 3 / 4;
   }
 
-.composition__heading {
-  width: calc(var(--text-width-md));
-}
+  .insights {
+    grid-area: 1 / 4 / 5 / 5;
+    overflow: hidden;
+  }
   .account {
-    grid-area: 4 / 2 / 7 / 3;
+    grid-area: 3 / 2 / 5 / 3;
   }
   .schedule {
-    grid-area: 4 / 3 / 7 / 4;
+    grid-area: 3 / 3 / 5 / 4;
   }
   .audience {
-    grid-area: 7 / 2 / 8 / 3;
+    grid-area: 5 / 2 / 6 / 3;
   }
   .growth {
-    grid-area: 7 / 3 / 8 / 5;
+    grid-area: 5 / 3 / 6 / 5;
+  }
+
+  .cta {
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .composition {
+    grid-area: 4 / 1 / 6 / 2;
   }
 
   .header {
@@ -77,16 +102,29 @@
     max-inline-size: var(--text-width-lg);
   }
 
+  .chart-illustration {
+    align-self: self-start;
+    inline-size: initial;
+  }
+
+  .composition__heading {
+    inline-size: calc(var(--text-width-md));
+  }
+
   .schedule {
     padding: var(--spacing-300) var(--spacing-300) 0;
 
     .calendar__wrapper {
-      height: 6.125rem;
+      block-size: 6.125rem;
     }
   }
 
   .growth--wrapper {
     gap: calc(var(--spacing-500) + 1.9rem);
+  }
+
+  .chart {
+    /* max-block-size: 11.75rem; */
   }
 
   .growth__heading {
@@ -98,5 +136,9 @@
   .audience {
     flex-direction: var(--flex-direction-column);
     align-items: start;
+  }
+
+  .composition__heading {
+    inline-size: calc(var(--text-width-md));
   }
 }

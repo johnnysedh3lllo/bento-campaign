@@ -20,7 +20,7 @@
     display: var(--display-grid);
     gap: var(--spacing-400);
     grid-template-columns: 1fr 1fr;
-    width: min(70rem, 100%);
+    inline-size: min(70rem, 100%);
     margin: 0 auto;
     grid-template-areas:
       "header header"
@@ -40,7 +40,7 @@
   .account {
     padding: var(--spacing-300);
     grid-area: account;
-    width: 100%;
+    inline-size: 100%;
   }
 
   .schedule {
@@ -48,7 +48,7 @@
     grid-area: schedule;
 
     .calendar__wrapper {
-      height: initial;
+      block-size: initial;
     }
   }
 
@@ -70,10 +70,10 @@
   .growth__heading {
     line-height: var(--leading-tight);
     letter-spacing: -0.12rem;
-    width: min(32.79rem, 100%);
+    inline-size: min(32.79rem, 100%);
   }
   .growth-illustration {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .audience {

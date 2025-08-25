@@ -46,7 +46,9 @@ const audienceHeading = document.querySelector(".audience__heading");
 const audienceArrow = document.querySelector(".audience__arrow");
 const audienceValue = document.querySelector(".audience__value");
 const audienceCaption = document.querySelector(".audience__caption");
-const audienceAvatars = document.querySelectorAll(".audience__avatars .avatar");
+const audienceAvatars = document.querySelectorAll(
+  ".audience__avatars .avatar__wrapper"
+);
 
 const ctaHeadingText = document.querySelector(".cta__heading p");
 const ctaHeadingEmphasis = document.querySelector(".cta__heading em");
@@ -55,6 +57,7 @@ const ctaBtn = document.querySelector(".cta__button");
 const ctaBtnIcon = document.querySelector(".cta__btn-icon");
 
 const compositionHeading = document.querySelector(".composition__heading");
+const compositionChat = document.querySelector(".composition__chat");
 
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
@@ -355,13 +358,13 @@ function createCTAAnimation(mainTl: GSAPTimeline) {
   mainTl
     .fromTo(
       ctaHeadingTextSplit.words,
-      { xPercent: -2, yPercent: 105 },
+      { xPercent: -2, yPercent: 106 },
       { xPercent: 0, yPercent: 0, stagger: { amount: 0.3 } },
       "1.3"
     )
     .fromTo(
       ctaHeadingEmphasis,
-      { xPercent: -150 },
+      { xPercent: -250 },
       { xPercent: 0, ease: "elastic.out(1.5,0.25)" },
       ">"
     )
