@@ -57,7 +57,7 @@ const ctaBtn = document.querySelector(".cta__button");
 const ctaBtnIcon = document.querySelector(".cta__btn-icon");
 
 const compositionHeading = document.querySelector(".composition__heading");
-const compositionChat = document.querySelector(".composition__chat");
+// const compositionChat = document.querySelector(".composition__chat");
 
 // Initialize SplitText
 const reviewSplit = new SplitText(".header__reviews", {
