@@ -335,6 +335,7 @@
 }
 
 .audience__avatars {
+  overflow: hidden;
   position: relative;
   inline-size: min(11.125rem, 100%);
 
@@ -438,6 +439,7 @@
   padding: var(--spacing-300);
   background: var(--surface-accent);
   border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .composition__heading {
@@ -482,6 +484,7 @@
 
 .composition__bubble--user {
   background-color: var(--surface-accent-user);
+  block-size: 3.915rem;
   > p {
     inline-size: calc(var(--text-width-lg) + 4ch);
   }
@@ -489,6 +492,8 @@
 
 .composition__bubble--ai {
   background-color: var(--surface-accent-ai);
+  inline-size: 100%;
+  block-size: 4.8869rem;
   > p {
     inline-size: calc(var(--text-width-lg) + 2ch);
   }

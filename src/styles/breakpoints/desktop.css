@@ -20,7 +20,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
 
-    /* max-block-size: 54rem; */
+    max-block-size: 54rem;
 
     grid-template-areas: initial;
   }
@@ -124,7 +124,7 @@
   }
 
   .chart {
-    /* max-block-size: 11.75rem; */
+    block-size: 13.1694rem;
   }
 
   .growth__heading {
