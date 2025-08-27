@@ -802,21 +802,19 @@ function createCompositionAnimation(mainTl: GSAPTimeline) {
 
 // Initialize animation
 function init() {
-  setTimeout(() => {
-    setInitialStates();
-    const mainTl = createShowcaseAnimation();
+  setInitialStates();
+  const mainTl = createShowcaseAnimation();
 
-    createHeaderAnimation(mainTl);
-    createAccountAnimation(mainTl);
-    createScheduleAnimation(mainTl);
-    createInsightsAnimation(mainTl);
-    createGrowthAnimation(mainTl);
-    createAudienceAnimation(mainTl);
-    createCTAAnimation(mainTl);
-    createCompositionAnimation(mainTl);
+  createHeaderAnimation(mainTl);
+  createAccountAnimation(mainTl);
+  createScheduleAnimation(mainTl);
+  createInsightsAnimation(mainTl);
+  createGrowthAnimation(mainTl);
+  createAudienceAnimation(mainTl);
+  createCTAAnimation(mainTl);
+  createCompositionAnimation(mainTl);
 
-    mainTl.play();
-  }, 1000);
+  mainTl.play();
 
   //   GSDevTools.create();
 }
